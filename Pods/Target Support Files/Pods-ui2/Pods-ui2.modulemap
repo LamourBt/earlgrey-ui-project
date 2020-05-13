@@ -1,0 +1,6 @@
+framework module Pods_ui2 {
+  umbrella header "Pods-ui2-umbrella.h"
+
+  export *
+  module * { export * }
+}

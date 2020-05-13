@@ -1,0 +1,24 @@
+PODS:
+  - EarlGrey (1.16.0)
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - EarlGrey
+  - iOSSnapshotTestCase
+
+SPEC REPOS:
+  trunk:
+    - EarlGrey
+    - iOSSnapshotTestCase
+
+SPEC CHECKSUMS:
+  EarlGrey: 455e5597ae5ccaca92cd46b81d8b25cacec060a1
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+
+PODFILE CHECKSUM: 19846d2a9d51a0d45580025ab9237061100c9d8e
+
+COCOAPODS: 1.9.1

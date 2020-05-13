@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-ui2/Pods-ui2-frameworks.sh
+${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework
+${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework
