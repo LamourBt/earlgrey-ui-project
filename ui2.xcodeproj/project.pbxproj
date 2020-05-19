@@ -10,7 +10,9 @@
 		0B1682486050D0C67E72F6E3 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47F5EE465BA111EB9DEBAAE /* EarlGrey.swift */; };
 		0D3C5FCDF7166C8E7E793751 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB2E319D944C6D76D8F58B3 /* EarlGrey.framework */; };
 		5F0A8FA02469DFB100B8ACA5 /* LogInViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A8F9F2469DFB100B8ACA5 /* LogInViewControllerTests.swift */; };
-		5F2AFAD9246C816D00B34675 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2AFAD8246C816D00B34675 /* Service.swift */; };
+		5F2AFAD9246C816D00B34675 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2AFAD8246C816D00B34675 /* ApiService.swift */; };
+		5FABCC2424746D080015EF4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FABCC2324746D080015EF4C /* main.swift */; };
+		5FABCC2624746D670015EF4C /* FakeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FABCC2524746D670015EF4C /* FakeAppDelegate.swift */; };
 		8827187C23F328E700F38001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827187B23F328E700F38001 /* AppDelegate.swift */; };
 		8827188023F328E700F38001 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827187F23F328E700F38001 /* LogInViewController.swift */; };
 		8827188523F328E900F38001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8827188423F328E900F38001 /* Assets.xcassets */; };
@@ -35,7 +37,9 @@
 		3917007D40CC466E728A794B /* Pods_ui2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ui2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BC61543A6BDC1304D1DE3E /* Pods-ui2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui2.release.xcconfig"; path = "Target Support Files/Pods-ui2/Pods-ui2.release.xcconfig"; sourceTree = "<group>"; };
 		5F0A8F9F2469DFB100B8ACA5 /* LogInViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewControllerTests.swift; sourceTree = "<group>"; };
-		5F2AFAD8246C816D00B34675 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5F2AFAD8246C816D00B34675 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		5FABCC2324746D080015EF4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5FABCC2524746D670015EF4C /* FakeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppDelegate.swift; sourceTree = "<group>"; };
 		6725B368E026E9D5702D7BE5 /* Pods-ui2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui2Tests.release.xcconfig"; path = "Target Support Files/Pods-ui2Tests/Pods-ui2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8827187823F328E700F38001 /* ui2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ui2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8827187B23F328E700F38001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,12 +99,14 @@
 			isa = PBXGroup;
 			children = (
 				8827187B23F328E700F38001 /* AppDelegate.swift */,
+				5FABCC2524746D670015EF4C /* FakeAppDelegate.swift */,
 				8827187F23F328E700F38001 /* LogInViewController.swift */,
 				8827188423F328E900F38001 /* Assets.xcassets */,
 				8827188623F328E900F38001 /* LaunchScreen.storyboard */,
 				8827188923F328E900F38001 /* Info.plist */,
 				B47F5EE465BA111EB9DEBAAE /* EarlGrey.swift */,
-				5F2AFAD8246C816D00B34675 /* Service.swift */,
+				5F2AFAD8246C816D00B34675 /* ApiService.swift */,
+				5FABCC2324746D080015EF4C /* main.swift */,
 			);
 			path = ui2;
 			sourceTree = "<group>";
@@ -303,8 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8827188023F328E700F38001 /* LogInViewController.swift in Sources */,
+				5FABCC2624746D670015EF4C /* FakeAppDelegate.swift in Sources */,
+				5FABCC2424746D080015EF4C /* main.swift in Sources */,
 				8827187C23F328E700F38001 /* AppDelegate.swift in Sources */,
-				5F2AFAD9246C816D00B34675 /* Service.swift in Sources */,
+				5F2AFAD9246C816D00B34675 /* ApiService.swift in Sources */,
 				0B1682486050D0C67E72F6E3 /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +398,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -444,6 +453,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

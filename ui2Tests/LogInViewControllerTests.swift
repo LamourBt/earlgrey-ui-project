@@ -12,14 +12,20 @@ import FBSnapshotTestCase
 
 @testable import ui2
 
+func globalEarlGreyConfiguration() {
+    GREYConfiguration.sharedInstance().setValue(false, forConfigKey: kGREYConfigKeyAnalyticsEnabled)
+    GREYConfiguration.sharedInstance().setValue(5.0, forConfigKey: kGREYConfigKeyInteractionTimeoutDuration)
+    GREYTestHelper.enableFastAnimation()
+}
 
 
 class LogInViewControllerTests: FBSnapshotTestCase {
     private var controller: LogInViewController!
     override func setUp() {
         super.setUp()
-        recordMode = false // so far this a bit annoying to flip... find a better way
-        controller = LogInViewController.init(service: MockedService())
+        globalEarlGreyConfiguration()
+       // recordMode = false // so far this a bit annoying to flip... find a better way
+    //    controller = LogInViewController.init(service: MockedApiService())
     }
 
     override func tearDown() {
@@ -27,7 +33,7 @@ class LogInViewControllerTests: FBSnapshotTestCase {
     }
     
     func testFailureStateOfSignInFlow() {
-        FBSnapshotVerifyViewController(controller)
+       // FBSnapshotVerifyViewController(controller)
 
         let username = "ajaksjdas"
         let password = "adjasdjklasjdkl"
@@ -59,7 +65,7 @@ class LogInViewControllerTests: FBSnapshotTestCase {
     
     
     func testSuccessfulStateOfSignInFlow() {
-        FBSnapshotVerifyViewController(controller)
+     //   FBSnapshotVerifyViewController(controller)
         
         let usernameField = EarlGrey.selectElement(with: grey_accessibilityID(LogInViewController.UX.usernameFieldIdentifier))
         let passwordField =  EarlGrey.selectElement(with: grey_accessibilityID(LogInViewController.UX.passwordFieldIdentifier))
@@ -69,8 +75,8 @@ class LogInViewControllerTests: FBSnapshotTestCase {
         
         let alert = EarlGrey.selectElement(with: grey_accessibilityLabel(LogInViewController.UX.successAlertViewIdentifier))
 
-        usernameField.perform(grey_typeText(MockedService.correctUsernameInput))
-        passwordField.perform(grey_typeText(MockedService.correctPasswordInput))
+        usernameField.perform(grey_typeText(MockedApiService.correctUsernameInput))
+        passwordField.perform(grey_typeText(MockedApiService.correctPasswordInput))
         
         let signInButton =  EarlGrey.selectElement(with: grey_accessibilityID(LogInViewController.UX.signInButtonIdentifier))
         

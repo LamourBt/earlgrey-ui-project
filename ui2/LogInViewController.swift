@@ -27,10 +27,10 @@ final class LogInViewController: UIViewController {
     public let button = UIButton()
     public let label = UILabel()
     
-    private let service: ServiceProtocol
+    private let service: ApiServiceProtocol
     
     
-    required init(service: ServiceProtocol) {
+    required init(service: ApiServiceProtocol) {
         self.service = service
         super.init(nibName: nil, bundle: nil)
     }

@@ -28,14 +28,14 @@ extension Error {
     }
 }
 
-protocol ServiceProtocol: class {
+protocol ApiServiceProtocol: class {
     static var correctPasswordInput: String { get }
     static var correctUsernameInput: String { get }
     var queue: DispatchQueue { get }
 }
 
 
-extension ServiceProtocol {
+extension ApiServiceProtocol {
     func signIn(
         username: String,
         password: String,
@@ -60,13 +60,13 @@ extension ServiceProtocol {
     }
 }
 
-class Service: ServiceProtocol {
+class ApiService: ApiServiceProtocol {
     static var correctUsernameInput: String = "James23"
     static var correctPasswordInput: String = "bond@123"
     let queue =  DispatchQueue(label: "com.lamour.lamour.ui2.service.background.queue")
 }
 
-class MockedService: ServiceProtocol {
+class MockedApiService: ApiServiceProtocol {
     static var correctUsernameInput: String = "Mello23"
     static var correctPasswordInput: String = "Pass@1823$$"
     let queue =  DispatchQueue(label: "com.lamour.ui2.test.background.queue")
